@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_customize_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="sanpi.adwise.activity.CustomizeProfileActivity">
+
+    <TextView
+        android:text="Customize Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView8"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:id="@+id/imageView"
+        android:layout_marginStart="26dp"
+        android:layout_below="@+id/textView8"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/userimage" />
+
+    <TextView
+        android:text="Birthdate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/birthdateT"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
+
+    <Button
+        android:text="Upload Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/selectB"
+        android:id="@+id/uploadB"
+        android:layout_alignEnd="@+id/selectB"
+        android:fontFamily="serif"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignBottom="@+id/imageView" />
+
+    <Button
+        android:text="Apply Changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/applyB"
+        android:fontFamily="serif"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:text="Select Image"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectB"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="serif"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/departmentT"
+        android:layout_marginStart="36dp" />
+
+    <TextView
+        android:text="City:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityT"
+        android:fontFamily="serif"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/departmentT"
+        android:layout_alignStart="@+id/departmentT" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_g"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/cityT"
+        android:layout_alignStart="@+id/cityT">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/femaleR"
+            android:text="Female"
+            android:fontFamily="serif"
+            android:textColor="@android:color/black">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/maleR"
+            android:text="Male"
+            android:fontFamily="serif"
+            android:textColor="@android:color/black">
+        </RadioButton>
+    </RadioGroup>
+
+    <TextView
+        android:text="Department:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/departmentT"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/birthdateT"
+        android:layout_alignStart="@+id/birthdateT" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dateT"
+        tools:hint="dd/MM/yyyy"
+        android:maxLength="10"
+        android:fontFamily="serif"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_alignBaseline="@+id/birthdateT"
+        android:layout_alignBottom="@+id/birthdateT"
+        android:layout_alignStart="@+id/uploadB" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:layout_alignTop="@+id/departmentT"
+        android:layout_alignStart="@+id/dateT" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignTop="@+id/cityT"
+        android:layout_alignStart="@+id/dateT" />
+
+</RelativeLayout>
